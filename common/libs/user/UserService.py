@@ -7,7 +7,7 @@ class UserService():
         m = hashlib.md5()
         str = "%s-%s"%(base64.encodebytes(pwd.encode("utf-8")),salt)
         m.update(str.encode("utf-8"))
-
+        print(m.hexdigest())
         return m.hexdigest()
     
     @staticmethod
